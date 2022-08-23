@@ -1,0 +1,23 @@
+label: Social Media Links
+form:
+  properties:
+    facebook:
+      label: Facebook URL
+      $type: textField
+      i18n: true
+    twitter:
+      label: Twitter URL
+      $type: textField
+      i18n: true
+    instagram:
+      label: Instagram URL
+      $type: textField
+      i18n: true
+    linkedIn:
+      label: LinkedIn URL
+      $type: textField
+      i18n: true
+    youtube:
+      label: Youtube
+      $type: textField
+      i18n: true

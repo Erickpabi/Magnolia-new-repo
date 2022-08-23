@@ -1,0 +1,16 @@
+label: Section
+form:
+  properties:
+    title:
+      label: Section Title
+      $type: textField
+      i18n: true
+    content:
+      label: Section Content
+      $type: richTextField
+      i18n: true
+    hashLink:
+      label: Hash Link
+      $type: comboBoxField
+      datasource:
+        name: anchors

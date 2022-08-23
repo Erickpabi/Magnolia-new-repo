@@ -1,0 +1,38 @@
+!content-type:banner
+name: banner
+icon: icon-content-app
+
+## Optional as its auto created from the contentType ##
+permissions:
+  roles:
+    editor-news: editor-news
+    editor-press-release: editor-press-release
+
+subApps:
+  detail:
+    label: Add Banner
+  browser:
+    actions:
+      activate:
+        $type: openDialogAction
+        dialogId: workflow-pages:publish
+        catalog: workflow
+        command: activate
+        icon: icon-publish
+      activateDeleted:
+        $type: openDialogAction
+        dialogId: workflow-pages:publish
+        catalog: workflow
+        command: activate
+        icon: icon-publish
+      deactivate:
+        $type: openDialogAction
+        dialogId: workflow-pages:unPublish
+        catalog: workflow
+        command: deactivate
+        icon: icon-unpublish
+        availability:
+          rules:
+            notDeleted: &notDeleted
+              $type: jcrIsDeletedRule
+              negate: true

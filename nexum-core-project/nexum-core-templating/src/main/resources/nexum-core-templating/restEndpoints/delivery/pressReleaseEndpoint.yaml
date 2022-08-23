@@ -1,0 +1,45 @@
+class: info.magnolia.rest.delivery.jcr.v2.JcrDeliveryEndpointDefinition
+workspace: pressrelease
+bypassWorkspaceAcls: true
+nodeTypes:
+  - pressRelease
+childNodeTypes:
+  - mgnl:content
+references:
+  - name: imageLink
+    propertyName: imageLink
+    referenceResolver:
+      class: info.magnolia.rest.reference.dam.AssetReferenceResolverDefinition
+      assetRenditions:
+        - 350x200 ## Used from the 'training-templating-website' module's theme
+        - 1200x500 ## Used from the 'training-templating-website' module's theme
+
+  - name: newsTag
+    propertyName: newsTag
+    referenceResolver:
+      class: info.magnolia.rest.reference.jcr.JcrReferenceResolverDefinition
+      targetWorkspace: newsTag
+  - name: tags
+    propertyName: tags
+    referenceResolver:
+      class: info.magnolia.rest.reference.jcr.JcrReferenceResolverDefinition
+      targetWorkspace: tags
+
+  - name: categories
+    propertyName: categories
+    referenceResolver:
+      class: info.magnolia.rest.reference.jcr.JcrReferenceResolverDefinition
+      targetWorkspace: category
+
+#params:
+#
+#  pressrelease:
+#    nodeTypes:
+#      0: mgnl:content
+#    includeSystemProperties: false
+#    limit: 30
+#  news:
+#    nodeTypes:
+#      0: mgnl:content
+#    includeSystemProperties: false
+#    limit: 30

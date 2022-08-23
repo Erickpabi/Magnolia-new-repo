@@ -1,0 +1,8 @@
+title: Page Header
+areas:
+  pageAreaItems:
+    title: Page Header Area
+    type: single
+    availableComponents:
+      logo:
+        id: nexum-core-templating:components/common/logo

@@ -1,0 +1,11 @@
+title: FooterArea
+areas:
+  footerAreaItems:
+    title: Footer Area
+    availableComponents:
+      contact:
+        id: nexum-core-templating:components/common/footer/contact
+      socialMediaLinks:
+        id: nexum-core-templating:components/common/footer/social-media-links
+      quickLinks:
+        id: nexum-core-templating:components/common/footer/quick-links-area

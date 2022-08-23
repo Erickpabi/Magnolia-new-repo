@@ -1,0 +1,15 @@
+label: Custom Header
+form:
+  properties:
+    image:
+      label: Logo
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: dam-chooser
+      required: true
+    altText:
+      label: Link
+      $type: textField
+      i18n: true
+      required: true

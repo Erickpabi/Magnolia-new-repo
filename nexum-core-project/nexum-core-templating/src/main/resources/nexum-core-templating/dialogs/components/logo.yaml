@@ -1,0 +1,15 @@
+label: Navbar Logo
+form:
+  properties:
+    image:
+      label: Logo
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: dam-chooser
+      required: true
+    link:
+      label: Link
+      $type: textField
+      i18n: true
+      required: true

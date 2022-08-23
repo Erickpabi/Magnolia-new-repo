@@ -1,0 +1,8 @@
+title: AnchorArea
+dialog: nexum-core-templating:components/sections/anchorArea
+areas:
+  anchorAreaItems:
+    title: Hash Links
+    availableComponents:
+      hashLink:
+        id: nexum-core-templating:components/sections/hashLink

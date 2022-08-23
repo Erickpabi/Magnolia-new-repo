@@ -1,0 +1,13 @@
+label: Press Banner
+form:
+  properties:
+    image:
+      label: Image
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: dam-chooser
+    text:
+      label: title
+      $type: textField
+      i18n: true

@@ -1,0 +1,7 @@
+title: Quick LInks Area
+areas:
+  quickLinksAreaItems:
+    title: Quick Links Area
+    availableComponents:
+      links:
+        id: nexum-core-templating:components/common/footer/links

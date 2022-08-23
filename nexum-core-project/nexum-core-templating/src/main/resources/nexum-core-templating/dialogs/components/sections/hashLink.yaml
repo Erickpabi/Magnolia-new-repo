@@ -1,0 +1,11 @@
+label: Section
+form:
+  properties:
+    title:
+      label: Section Title
+      $type: textField
+      i18n: true
+    hashLink:
+      label: Hash Link
+      i18n: true
+      $type: textField

@@ -1,0 +1,13 @@
+class: info.magnolia.rest.delivery.jcr.v2.JcrDeliveryEndpointDefinition
+workspace: anchor
+bypassWorkspaceAcls: true
+nodeTypes:
+  - anchor
+childNodeTypes:
+  - mgnl:content
+references:
+  - name: hashLink
+    propertyName: hashLink
+    referenceResolver:
+      class: info.magnolia.rest.reference.jcr.JcrReferenceResolverDefinition
+      targetWorkspace: anchor

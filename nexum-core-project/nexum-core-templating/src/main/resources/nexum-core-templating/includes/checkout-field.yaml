@@ -1,0 +1,7 @@
+show:
+  label: ""
+  $type: checkBoxField
+  i18n: true
+  buttonLabel: Select to display in navigation
+  show:
+    description: Shown in navigation?

@@ -1,0 +1,22 @@
+subApps:
+  browser:
+    actions:
+      importExcel:
+        $type: openDialogAction
+        name: Import Excel
+        label: Import Excel
+        icon: icon-import
+        dialogId: nexum-core-templating:excelImportDialog
+        availability:
+          nodeTypes:
+            - mgnl:folder
+            - mgnl:user
+            - news
+    actionbar:
+      sections:
+        folder:
+          groups:
+            importExportActions:
+              items:
+                importExcel:
+                  name: importExcel

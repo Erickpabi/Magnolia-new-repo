@@ -1,0 +1,61 @@
+class: info.magnolia.rest.delivery.jcr.v2.JcrDeliveryEndpointDefinition
+workspace: news
+bypassWorkspaceAcls: true
+nodeTypes:
+  - news
+childNodeTypes:
+  - mgnl:content
+references:
+  - name: imageLink
+    propertyName: imageLink
+    referenceResolver:
+      class: info.magnolia.rest.reference.dam.AssetReferenceResolverDefinition
+      assetRenditions:
+        - small ## Used from the 'training-templating-website' module's theme
+        - medium ## Used from the 'training-templating-website' module's theme
+        - large ## Used from the 'training-templating-website' module's theme
+        - 1600 ## Used from the 'training-templating-website' module's theme
+        - 1366 ## Used from the 'training-templating-website' module's theme
+        - 240 ## Used from the 'training-templating-website' module's theme
+        - 1600x1200 ## Used from the 'training-templating-website' module's theme
+        - 1200x500 ## Used from the 'training-templating-website' module's theme
+        - 1366x1024 ## Used from the 'training-templating-website' module's theme
+        - 240x180 ## Used from the 'training-templating-website' module's theme
+        - max-1000x1000 ## Used from the 'training-templating-website' module's theme
+        - nonexistent ## Fallback if no image variation existing.
+  - name: newsTag
+    propertyName: newsTag
+    referenceResolver:
+      class: info.magnolia.rest.reference.jcr.JcrReferenceResolverDefinition
+      targetWorkspace: newsTag
+  - name: tags
+    propertyName: tags
+    referenceResolver:
+      class: info.magnolia.rest.reference.jcr.JcrReferenceResolverDefinition
+      targetWorkspace: tags
+  - name: categories
+    propertyName: categories
+    referenceResolver:
+      class: info.magnolia.rest.reference.jcr.JcrReferenceResolverDefinition
+      targetWorkspace: category
+
+
+
+#workspace: news
+#includeSystemProperties: false
+#depth: 3
+#nodeTypes:
+#  - news
+#childNodeTypes:
+#  - mgnl:contentNode
+
+
+
+#params:
+#
+#  news:
+#    nodeTypes:
+#      0: mgnl:content
+#    bypassWorkspaceAcls: true
+#    includeSystemProperties: false
+#    limit: 30

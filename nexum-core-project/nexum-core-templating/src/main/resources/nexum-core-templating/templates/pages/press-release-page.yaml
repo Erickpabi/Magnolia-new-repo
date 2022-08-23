@@ -1,0 +1,33 @@
+title:  Press Page
+visible: true
+baseUrl: http://localhost:3000
+routeTemplate: '/{language}{{@path}}'
+renderType: spa
+class: info.magnolia.rendering.spa.renderer.SpaRenderableDefinition
+
+dialog: nexum-core-templating:pages/press-release-page
+
+areas:
+  header:
+    title: Page Header
+    availableComponents:
+      pageHeader:
+        id: nexum-core-templating:components/common/page-header
+  headerArea:
+    title: Press Header Area
+    availableComponents:
+      press:
+        id: nexum-core-templating:components/pressBanner
+      pressHighlights:
+        id: nexum-core-templating:components/press/press-highlights
+  main:
+    title: Press List Area
+    availableComponents:
+      pressListing:
+        id: nexum-core-templating:components/press/press-listing
+
+  footer:
+    title: Footer Area
+    availableComponents:
+      FooterCard:
+        id: nexum-core-templating:components/common/footerArea

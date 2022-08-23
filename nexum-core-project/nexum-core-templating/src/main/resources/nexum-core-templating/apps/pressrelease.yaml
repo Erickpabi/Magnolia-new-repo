@@ -1,0 +1,41 @@
+!content-type:pressrelease
+name: pressRelease
+icon: icon-calendar
+
+## Optional as its auto created from the contentType ##
+permissions:
+  roles:
+    editor-press-release: editor-press-release
+
+subApps:
+  detail:
+    label: Add Press Release
+    form:
+      properties:
+        content:
+          $type: richTextField
+          configJsFile: /.resources/nexum-core-templating/webresources/ckeditor/config-magnolia-extended.js
+  browser:
+    actions:
+      activate:
+        $type: openDialogAction
+        dialogId: workflow-pages:publish
+        catalog: workflow
+        command: activate
+      activateDeleted:
+        $type: openDialogAction
+        dialogId: workflow-pages:publish
+        catalog: workflow
+        command: activate
+        icon: icon-publish
+      deactivate:
+        $type: openDialogAction
+        dialogId: workflow-pages:unPublish
+        catalog: workflow
+        command: deactivate
+        icon: icon-unpublish
+        availability:
+          rules:
+            notDeleted: &notDeleted
+              $type: jcrIsDeletedRule
+              negate: true

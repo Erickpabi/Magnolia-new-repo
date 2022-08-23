@@ -1,0 +1,7 @@
+label: News Card
+form:
+  properties:
+    text:
+      label: title
+      $type: textField
+      i18n: true

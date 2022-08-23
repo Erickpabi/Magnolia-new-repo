@@ -1,0 +1,7 @@
+label: Featured News
+form:
+  properties:
+    text:
+      label: Headline Text
+      $type: textField
+      i18n: true

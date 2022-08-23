@@ -1,0 +1,36 @@
+title:  News Page
+visible: true
+baseUrl: http://localhost:3000
+routeTemplate: '/{language}{{@path}}'
+renderType: spa
+class: info.magnolia.rendering.spa.renderer.SpaRenderableDefinition
+
+dialog: nexum-core-templating:pages/news-page
+
+areas:
+  header:
+    title: Page Header
+    availableComponents:
+      pageHeader:
+        id: nexum-core-templating:components/common/page-header
+  featured:
+    title: Featured News Area
+    availableComponents:
+      Headline:
+        id: nexum-core-templating:components/common/headline
+      Featured News:
+        id: nexum-core-templating:components/common/featured-news
+      Other Features:
+        id: nexum-core-templating:components/common/other-featured-news
+  main:
+    title: News
+    availableComponents:
+      Headline:
+        id: nexum-core-templating:components/common/headline
+      news:
+        id: nexum-core-templating:components/news/news-card
+  footer:
+    title: Footer Area
+    availableComponents:
+      FooterCard:
+        id: nexum-core-templating:components/common/footerArea

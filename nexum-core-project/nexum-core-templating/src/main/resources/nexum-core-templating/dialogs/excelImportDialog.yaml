@@ -1,0 +1,17 @@
+label: ""
+form:
+  properties:
+    contentStream:
+      label: ""
+      $type: uploadField
+
+actions:
+  commit:
+    class: de.nexum.magnolia.templating.definitions.ExcelImportNewsActionDefinition
+    availability:
+      root: true
+
+  cancel:
+    $type: closeAction
+    availability:
+      root: true

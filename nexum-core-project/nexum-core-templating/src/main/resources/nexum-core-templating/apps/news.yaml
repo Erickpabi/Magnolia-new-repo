@@ -1,0 +1,85 @@
+!content-type:news
+name: news
+icon: icon-news
+
+## Optional as its auto created from the contentType ##
+permissions:
+  roles:
+    editor-news: editor-news
+
+subApps:
+  detail:
+    label: Add News
+    form:
+      properties:
+        content:
+          $type: richTextField
+          configJsFile: /.resources/nexum-core-templating/webresources/ckeditor/config-magnolia-extended.js
+  browser:
+    actions:
+      activate:
+        $type: openDialogAction
+        dialogId: workflow-pages:publish
+        catalog: workflow
+        command: activate
+        icon: icon-publish
+      activateDeleted:
+        $type: openDialogAction
+        dialogId: workflow-pages:publish
+        catalog: workflow
+        command: activate
+        icon: icon-publish
+      deactivate:
+        $type: openDialogAction
+        dialogId: workflow-pages:unPublish
+        catalog: workflow
+        command: deactivate
+        icon: icon-unpublish
+        availability:
+          rules:
+            notDeleted:
+              $type: jcrIsDeletedRule
+              negate: true
+    workbench:
+      contentViews:
+        tree:
+          columns: &columnsConfiguration
+
+            name:
+              label: Name
+              expandRatio: 0.5
+              nodeTypeToIcon:
+                event: icon-datepicker
+
+            date:
+              label: Date of creation
+              $type: dateColumn
+              expandRatio: 0.5
+
+            author:
+              label: Author
+              expandRatio: 0.5
+
+            tags: &tags
+              label: Tags
+              $type: columnComponent
+              type: java.util.Collection
+              expandRatio: 0.5
+              editor:
+                field:
+                  $type: tokenField
+                  comboBox:
+                    datasource:
+                      $type: jcrDatasource
+                      workspace: tags
+                      allowedNodeTypes:
+                        - mgnl:tag
+
+            categories: &category
+              label: Categories
+              class: de.nexum.magnolia.templating.JcrCategoryColumnDefinition
+              expandRatio: 0.5
+
+            activationStatus:
+              label: Status
+              expandRatio: 0.5

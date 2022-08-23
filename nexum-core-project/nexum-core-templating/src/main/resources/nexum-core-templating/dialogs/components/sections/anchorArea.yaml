@@ -1,0 +1,7 @@
+label: Anchor Area
+form:
+  properties:
+    title:
+      label: Anchor Area Title
+      $type: textField
+      i18n: true

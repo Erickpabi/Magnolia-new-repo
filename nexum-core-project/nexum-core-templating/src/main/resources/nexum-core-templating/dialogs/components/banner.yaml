@@ -1,0 +1,7 @@
+label: Banner
+form:
+  properties:
+    title:
+      label: Banner Title
+      $type: textField
+      i18n: true

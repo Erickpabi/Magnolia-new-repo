@@ -1,0 +1,8 @@
+title:  Single Press Page
+visible: true
+baseUrl: http://localhost:3000
+routeTemplate: '/{language}{{@path}}'
+renderType: spa
+class: info.magnolia.rendering.spa.renderer.SpaRenderableDefinition
+
+dialog: nexum-core-templating:pages/single-press-page

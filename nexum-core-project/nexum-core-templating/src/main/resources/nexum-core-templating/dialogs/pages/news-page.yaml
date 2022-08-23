@@ -1,0 +1,8 @@
+label: News Page
+form:
+  properties:
+    !include:/nexum-core-templating/includes/checkout-field.yaml
+    title:
+      label: Title
+      $type: textField
+      i18n: true

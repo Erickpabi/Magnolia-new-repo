@@ -1,0 +1,31 @@
+label: Contact
+form:
+  properties:
+    address:
+      label: Address
+      $type: textField
+      i18n: true
+      required: true
+    city:
+      label: City
+      $type: textField
+      i18n: true
+      required: true
+    country:
+      label: Country
+      $type: textField
+      i18n: true
+      required: true
+    telephone:
+      label: Telephone
+      $type: textField
+      i18n: true
+      required: true
+    email:
+      label: Email
+      $type: textField
+      i18n: true
+      required: true
+      validators:
+        email:
+          $type: emailValidator

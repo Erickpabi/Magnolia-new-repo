@@ -1,0 +1,13 @@
+label: Links
+form:
+  properties:
+    title:
+      label: Title
+      $type: textField
+      i18n: true
+      required: true
+    url:
+      label: URL
+      $type: textField
+      i18n: true
+      required: true
